@@ -1,0 +1,56 @@
+html = '''<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Tabela com Divs</title>
+<style>
+    .table {
+    display: grid;
+    grid-template-columns: 200px 150px 150px;
+    border: 1px solid #666;
+    border-radius: 8px;
+    overflow: hidden;
+    max-width: 520px;
+    margin: 30px auto;
+    font-family: Arial, sans-serif;
+    }
+    .row { display: contents; }
+    .cell {
+    padding: 10px 12px;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ddd;
+    background-color: #fafafa;
+    }
+    .cell:last-child { border-right: none; }
+    .header .cell { background: #0066cc; color: #fff; font-weight: 700; }
+    .row:nth-child(odd) .cell { background: #f7f7f7; }
+    .row:nth-child(even) .cell { background: #ffffff; }
+</style>
+</head>
+<body>
+<h1 style="text-align:center;">Tabela construída com DIV</h1>
+<div class="table" role="table" aria-label="Exemplo de tabela">
+    <div class="row header" role="row">
+    <div class="cell" role="columnheader">Produto</div>
+    <div class="cell" role="columnheader">Quantidade</div>
+    <div class="cell" role="columnheader">Preço</div>
+    </div>
+    <div class="row" role="row">
+    <div class="cell" role="cell">Caneta</div>
+    <div class="cell" role="cell">10</div>
+    <div class="cell" role="cell">R$ 5,00</div>
+    </div>
+    <div class="row" role="row">
+    <div class="cell" role="cell">Caderno</div>
+    <div class="cell" role="cell">4</div>
+    <div class="cell" role="cell">R$ 20,00</div>
+    </div>
+    <div class="row" role="row">
+    <div class="cell" role="cell">Mochila</div>
+    <div class="cell" role="cell">2</div>
+    <div class="cell" role="cell">R$ 120,00</div>
+    </div>
+</div>
+</body>
+</html>'''
